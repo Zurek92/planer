@@ -2,3 +2,8 @@
 line-length = 100
 skip-string-normalization = true
 exclude = '/planer'
+
+[tool.isort]
+known_first_party = 'planer'
+known_third_party = 'django'
+sections = 'STDLIB,THIRDPARTY,FIRSTPARTY'
