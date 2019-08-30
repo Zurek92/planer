@@ -3,6 +3,7 @@ plane scraper
 
 ## Run application in developer mode
 1. enter `docker/` folder and run `docker-compose up`
+1. make migration: `docker exec -it <docker_container> python manage.py migrate`
 
 ## Docker commands:
 ### Images:
@@ -19,3 +20,6 @@ plane scraper
 ### Docker-compose:
 1. `docker-compose up` - run application (containers)
 1. `docker-compose down` - stop application (containers)
+
+## Maintaining project:
+1. formatting code and reorder imports: inside docker container with django project run `make format`
