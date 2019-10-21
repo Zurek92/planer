@@ -35,9 +35,9 @@ class Airport:
             for data in self.get_data:
                 if not data:
                     file.write(f'{data}\n')
-
-    def _class_name(self):
-        return self.__class__.__name__
+    @classmethod
+    def _class_name(cls):
+        return cls.__class__.__name__
 
 
 class Chopina(Airport):
@@ -61,6 +61,3 @@ class Krakow(Airport):
             'http://www.krakowairport.pl/pl/pasazer,c70/informacje-o-lotach,c71/przyloty,a178.html'
         )
         self.head = ['godz', 'data', 'rejs', 'kierunek', 'linia']
-
-for i in Chopina().get_data:
-    print(i)
