@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Statistic displayed by airport with quality of flights.</h2>
+    <table>
+        <thead>
+            <th>Airport</th>
+            <th>Air company</th>
+            <th>Amount Delayed Flight</th>
+            <th>Amount Cannceled Flight</th>
+            <th>Total Flights</th>
+            <th>Flight Quality</th>
+        </thead>
+        <tbody>
+        {% for row in data %}
+        <tr>
+            {% for item in row %}
+            <td> {{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor%}
+        </tbody>
+    </table>
+    <h2>Statistic displayed by air company with quality of flights on time</h2>
+    <table>
+        <th>Air company</th>
+        <th>Total Flighths</th>
+        <th>Amount Delayed Flights</th>
+        <th>Amount Cannceled Flights</th>
+        <th>Flight Quality</th>
+    </table>
+</body>
+</html>
