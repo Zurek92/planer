@@ -18,13 +18,13 @@
             <th>Flight Quality</th>
         </thead>
         <tbody>
-        {% for row in data %}
-        <tr>
-            {% for item in row %}
-            <td> {{ item }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor%}
+            {% for row in data %}
+            <tr>
+                {% for item in row %}
+                    <td> {{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor%}
         </tbody>
     </table>
     <h2>Statistic displayed by air company with quality of flights on time</h2>
